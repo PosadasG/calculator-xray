@@ -6,19 +6,22 @@ on:
       - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
 
 jobs:
-  Xray:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
         uses: actions/checkout@v2.3.1
         run: dotnet  build ../../src/Calculator.sln /t:Rebuild
 
-      - name: "push"
+      - name: push
         uses: jfrog/setup-jfrog-cli@v3
         env:
-          # JFrog platform url (for example: https://acme.jfrog.io) 
-          JF_URL: ${{ secrets.JF_URL }}
-          # Basic authentication credentials
-          JF_USER: ${{ secrets.JF_USER }}
-          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+        # JFrog platform url (for example: https://acme.jfrog.io) 
+        JF_URL: ${{ secrets.JF_URL }}
+        
+        # Basic authentication credentials
+        JF_USER: ${{ secrets.JF_USER }}
+
+        JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
       - run: |
           jfrog rt u ../../nuget/AspenTech.Calculator.Sample.1.0.0.nupkg devops-nuget-dev-local/ --recursive=false
