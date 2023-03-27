@@ -28,5 +28,12 @@ jobs:
     - name: Install dependencies
       run: dotnet restore src/Calculator.sln 
       
-    - name: Build
-      run: dotnet build src/Calculator.sln 
+    - name: publish
+      uses: jfrog/setup-jfrog-cli@v3
+      env:
+        JF_URL: ${{ secrets.JF_URL }}
+        JF_USER: ${{ secrets.JF_USER }}
+        JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+        F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+        run: |
+          jf rt u "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" devops-nuget-dev-local --url ${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}
