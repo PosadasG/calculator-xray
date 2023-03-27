@@ -15,3 +15,9 @@ C:\Users\POSADASG\Documents\Calculator\Calculator\bin\Debug\Calculator.pdb
 C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.dll
 C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.dll
+C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.pdb
+C:\Users\POSADASG\Documents\Projects\Calculator\src\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\POSADASG\Documents\Projects\Calculator\src\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\POSADASG\Documents\Projects\Calculator\src\obj\Debug\Calculator.dll
+C:\Users\POSADASG\Documents\Projects\Calculator\src\obj\Debug\Calculator.pdb

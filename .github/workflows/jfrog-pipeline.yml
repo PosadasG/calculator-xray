@@ -1,25 +1,18 @@
+trigger:
+- main
 
-name: Xray
-on:
-  push:
-    branches:
-      - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
+pool:
+  vmImage: 'ubuntu-latest'
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
+steps:
+  - task: UseDotNet@2
+    inputs:
+      version: '2.2.x'
+      includePreviewVersions: true
+      performMultiLevelLookup: true
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      projects: '**/**/src/*.sln'
 
-      # - name: Build
-      #   run: dotnet build ../../src/Calculator.sln /t:Rebuild
 
-      - name: publishing
-        uses: jfrog/setup-jfrog-cli@v3
-        env:
-          JF_USER: ${{ secrets.JF_USER }}
-          JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
-          F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}   
-          JF_URL: ${{ secrets.JF_URL}}     
-          run: dotnet nuget push "../../nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" -Source ${{ secrets.JF_URL }}  -username admin -password ${{ secrets.JF_ACCESS_TOKEN }}
