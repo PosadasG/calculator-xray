@@ -28,15 +28,15 @@ jobs:
     - name: Install dependencies
       run: dotnet restore src/Calculator.sln 
 
-    - name: publish
-      run: dotnet nuget  push nuget/AspenTech.Calculator.Sample.1.0.0.nupkg  AKCp8nzqUqDp7pJzWDK5FTvXzc8fxRyu5XwEUPGngkF2o6CYgFEaZK8wM4yqy3naqYrXDDCyC -Source http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/devops-nuget-dev-local/
+    - name: build
+      run: dotnet build src/Calculator.sln 
       
-    # - name: publish
-    #   uses: jfrog/setup-jfrog-cli@v3
-    #   env:
-    #     JF_URL: ${{ secrets.JF_URL }}
-    #     JF_USER: ${{ secrets.JF_USER }}
-    #     JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
-    #     F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-    #     run: |
-    #       nuget sources Add -Name ArtifactoryV2 -Source http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/devops-nuget-dev-local -username admin -password <PASSWORD>
+    - name: publish
+      uses: jfrog/setup-jfrog-cli@v3
+      env:
+        JF_URL: ${{ secrets.JF_URL }}
+        JF_USER: ${{ secrets.JF_USER }}
+        JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+        F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+        run: |
+            jf rt u "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" devops-nuget-dev-local --url "http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/devops-nuget-dev-local/" --apikey=${{ secrets.JF_ACCESS_TOKEN }}
