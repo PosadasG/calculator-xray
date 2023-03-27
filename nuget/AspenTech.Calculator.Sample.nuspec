@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <!-- Required elements-->
+    <id>AspenTech.Calculator.Sample</id>
+    <version>1.0.0</version>
+    <authors>Aspen Technology, Inc.</authors>
+    <description>Realize basics calcs</description>
+    <!-- Optional elements -->
+    <owners>Aspen Technology, Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2022 Aspen Technology, Inc.</copyright>
+    <!-- This Sample support multiple .NET versions. Ref. https://docs.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks -->
+    <dependencies>
+      <group targetFramework="net40" />
+      <group targetFramework="net48" />
+    </dependencies>
+
+  </metadata>
+  <files>
+
+    <!-- Including assembly files for each .NET Framework-->
+    <!-- Ref. https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-assembly-files -->
+
+    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll" target="lib\net40" />
+    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb" target="lib\net40" />
+    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll" target="lib\net48" />
+    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb" target="lib\net48" />
+
+    <!-- Files to include extra documentation about the package should be include in \docs folder in a README.md -->
+    <file src="README.md" target="\docs" />
+    <!-- Custom build targets or properties in projects. Referencec https://docs.microsoft.com/en-au/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package -->
+    <!-- Important! To name the .targets file in the same way than the package id provided in this file -->
+    <file src="AspenTech.Calculator.Sample.targets" target="\build" />
+
+  </files>
+</package>

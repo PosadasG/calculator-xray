@@ -1,0 +1,17 @@
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\bin\Debug\Calculator.dll
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\bin\Debug\Calculator.pdb
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb
+C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\bin\Debug\Calculator.dll
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\bin\Debug\Calculator.pdb
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll
+C:\Users\POSADASG\OneDrive - Aspen Technology, Inc\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb
+C:\Users\POSADASG\Documents\Calculator\Calculator\bin\Debug\Calculator.dll
+C:\Users\POSADASG\Documents\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.dll
+C:\Users\POSADASG\Documents\Calculator\Calculator\obj\Debug\Calculator.pdb
