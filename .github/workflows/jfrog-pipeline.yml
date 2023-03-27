@@ -1,5 +1,10 @@
-trigger:
-- main
+
+name: Xray
+on:
+  push:
+    branches:
+      - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
+
 
 pool:
   vmImage: 'ubuntu-latest'
