@@ -1,23 +1,32 @@
+name: build
 
-name: Xray
 on:
   push:
-    branches:
-      - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
+  pull_request:
+    branches: [ main ]
 
+
+env:
+  DOTNET_VERSION: '6.0.401' # The .NET SDK version to use
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  build:
+
+    name: build-${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
     steps:
-      - task: UseDotNet@2
-        inputs:
-          version: '2.2.x'
-          includePreviewVersions: true
-          performMultiLevelLookup: true
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: 'build'
-          projects: '**/**/src/*.sln'
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
 
-
+    - name: Install dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build ../../src/Calculator.sln 
