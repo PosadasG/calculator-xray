@@ -15,9 +15,9 @@ jobs:
       - name: Build
         run: dotnet  build ../../src/Calculator.sln /t:Rebuild
 
-
-      - uses: jfrog/setup-jfrog-cli@v3
-       env:
+      - name: push
+        uses: jfrog/setup-jfrog-cli@v3
+        env:
         # JFrog platform url (for example: https://acme.jfrog.io) 
         JF_URL: ${{ secrets.JF_URL }}
         
@@ -27,5 +27,5 @@ jobs:
         or
         # JFrog Platform access token
         JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-       - run: |
+        - run: |
           jfrog rt u ../../nuget/AspenTech.Calculator.Sample.1.0.0.nupkg devops-nuget-dev-local/ --recursive=false
