@@ -12,13 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
+      - name: Build
+        run: dotnet  build src/Calculator.sln /t:Rebuild
+
       - name: publish
-      - uses: jfrog/setup-jfrog-cli@v3
+        uses: jfrog/setup-jfrog-cli@v3
           env:
             JF_USER: ${{ secrets.JF_USER }}
             JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
             F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
                 run: |
                   jf rt u ../../nuget/AspenTech.Calculator.Sample.1.0.0.nupkg devops-nuget-dev-local/ --recursive=false
-       
-  
