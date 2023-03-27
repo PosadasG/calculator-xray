@@ -6,7 +6,7 @@ on:
       - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
 
 jobs:
-  CLAssistant:
+  Xray:
     runs-on: ubuntu-latest
     steps:
         uses: actions/checkout@v2.3.1
