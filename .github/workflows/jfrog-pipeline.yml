@@ -26,7 +26,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Install dependencies
-      run: dotnet restore ../../src/Calculator.sln 
+      run: dotnet restore src/Calculator.sln 
       
     - name: Build
-      run: dotnet build ../../src/Calculator.sln 
+      run: dotnet build src/Calculator.sln 
