@@ -15,23 +15,23 @@
       <group targetFramework="net40" />
       <group targetFramework="net48" />
     </dependencies>
-
+    <license type="file">LICENSE.txt</license>
   </metadata>
   <files>
 
     <!-- Including assembly files for each .NET Framework-->
     <!-- Ref. https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-assembly-files -->
 
-    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll" target="lib\net40" />
-    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb" target="lib\net40" />
-    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.dll" target="lib\net48" />
-    <file src="C:\Users\posadasg\Desktop\NugetPresentation\Calculator\obj\Debug\Calculator.pdb" target="lib\net48" />
+    <file src="C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.dll" target="lib\net40" />
+    <file src="C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.pdb" target="lib\net40" />
+    <file src="C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.dll" target="lib\net48" />
+    <file src="C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\Calculator.pdb" target="lib\net48" />
 
     <!-- Files to include extra documentation about the package should be include in \docs folder in a README.md -->
-    <file src="README.md" target="\docs" />
+    <!-- <file src="README.md" target="\docs" /> -->
     <!-- Custom build targets or properties in projects. Referencec https://docs.microsoft.com/en-au/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package -->
     <!-- Important! To name the .targets file in the same way than the package id provided in this file -->
     <file src="AspenTech.Calculator.Sample.targets" target="\build" />
-
+    <file src="C:\Users\POSADASG\Documents\Projects\Calculator\src\bin\Debug\LICENSE.txt" target="" />
   </files>
 </package>
