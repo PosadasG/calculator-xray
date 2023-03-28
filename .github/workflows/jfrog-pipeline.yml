@@ -39,4 +39,4 @@ jobs:
         JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
         F_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
         run: |
-            jf rt upload devops-nuget-dev-local --url="http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/devops-nuget-dev-local" --apikey=${{ secrets.JF_ACCESS_TOKEN }}
+            jf rt upload devops-nuget-dev-local --url="http://artifactory4.rnd.aspentech.com:8081" --apikey=${{ secrets.JF_ACCESS_TOKEN }}
