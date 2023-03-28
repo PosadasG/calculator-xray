@@ -34,5 +34,5 @@ jobs:
 
     - uses: jfrog/setup-jfrog-cli@v3
     - run: |
-        jfrog rt upload "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" devops-nuget-dev-local --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}  --build-number="1.0.0" --quiet=true
+        jfrog rt upload "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" devops-nuget-dev-local --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}  
       
