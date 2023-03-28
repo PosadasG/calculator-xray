@@ -34,4 +34,4 @@ jobs:
 
     - uses: jfrog/setup-jfrog-cli@v3
     - run: |
-        jf rt upload devops-nuget-dev-local --user="admin"--url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }} --interactive=false
+        jf rt upload devops-nuget-dev-local --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }} --interactive=false
