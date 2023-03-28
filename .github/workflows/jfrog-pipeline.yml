@@ -33,6 +33,6 @@ jobs:
       
     - name: publish
       uses: jfrog/setup-jfrog-cli@v3
-     
-        run: |
+    
+      run: |
             jf rt upload devops-nuget-dev-local --user="admin"--url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }} --interactive=false
