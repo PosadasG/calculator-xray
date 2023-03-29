@@ -29,8 +29,9 @@ jobs:
     - name: build
       run: dotnet build src/Calculator.sln 
       
-    - uses: jfrog/setup-jfrog-cli@v3
-    
+    - uses: jfrog/setup-jfrog-cli@v1
+      env:
+     
     - run: |
-        jf rt ping --url="http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/v3/devops-nuget-dev-local"
+        jfrog rt u "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" "devops-nuget-dev-local" --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}
    
