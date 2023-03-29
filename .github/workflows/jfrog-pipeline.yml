@@ -33,6 +33,5 @@ jobs:
       env:
      
     - run: |
-        jf rt ping --url=http://my-rt-server.com/artifactory
-        
+        jf rt ping --url="http://artifactory4.rnd.aspentech.com:8082/"
    
