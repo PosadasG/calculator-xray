@@ -1,9 +1,8 @@
-name: build
-
+name: Xray
 on:
   push:
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
 
 
 env:
@@ -39,8 +38,6 @@ jobs:
         # Basic authentication credentials
         JF_USER: ${{ secrets.JF_USER }}
         JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
-        or
-        # JFrog Platform access token      # test build
         JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
     - run: |
         jf rt ping
