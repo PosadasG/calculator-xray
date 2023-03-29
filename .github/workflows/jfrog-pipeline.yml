@@ -33,5 +33,5 @@ jobs:
       env:
      
     - run: |
-        jfrog rt u "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" "devops-nuget-dev-local" --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}
+        jfrog rt upload "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" "devops-nuget-dev-local" --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}
    
