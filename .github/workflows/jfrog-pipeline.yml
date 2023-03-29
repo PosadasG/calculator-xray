@@ -32,7 +32,15 @@ jobs:
       run: dotnet build src/Calculator.sln 
       
     - uses: jfrog/setup-jfrog-cli@v3
+      env:
+        # JFrog platform url (for example: https://acme.jfrog.io) 
+        JF_URL: ${{ secrets.JF_URL }}
+        
+        # Basic authentication credentials
+        JF_USER: ${{ secrets.JF_USER }}
+        JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+        or
+        # JFrog Platform access token
+        JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
     - run: |
-        jf rt upload "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" devops-nuget-dev-local --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}  --interactive=false --build-name a --build-number 1
-
-      
+        jf rt ping
