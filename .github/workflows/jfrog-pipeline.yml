@@ -33,6 +33,6 @@ jobs:
       env:
      
     - run: |
-        jf rt ping
+        jf rt ping --url=http://my-rt-server.com/artifactory
         
    
