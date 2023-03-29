@@ -30,8 +30,7 @@ jobs:
       run: dotnet build src/Calculator.sln 
       
     - uses: jfrog/setup-jfrog-cli@v3
-      env:
-     
+    
     - run: |
         jf rt ping --url="http://artifactory4.rnd.aspentech.com:8082/"
    
