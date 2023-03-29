@@ -1,4 +1,4 @@
-nname: Xray
+name: Xray
 on:
   push:
     branches:
