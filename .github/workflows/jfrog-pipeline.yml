@@ -32,5 +32,5 @@ jobs:
     - uses: jfrog/setup-jfrog-cli@v3
     
     - run: |
-        jf rt ping --url=${{ secrets.JF_URL }}
+        jf rt ping --url="http://artifactory4.rnd.aspentech.com:8081/artifactory/api/nuget/v3/devops-nuget-dev-local"
    
