@@ -32,5 +32,4 @@ jobs:
     - uses: jfrog/setup-jfrog-cli@v1
     
     - run: |
-        jfrog rt upload  "nuget/AspenTech.Calculator.Sample.1.0.0.nupkg" "devops-nuget-dev-local" --url=${{ secrets.JF_URL }} --apikey=${{ secrets.JF_ACCESS_TOKEN }}
-   
+        jfrog rt upload "nuget/AspenTech.Calculator.Sample2.1.0.0.nupkg" "devops-nuget-dev-local/" --url="http://artifactory4.rnd.aspentech.com:8081/artifactory" --apikey="AKCp8nzqUqDp7pJzWDK5FTvXzc8fxRyu5XwEUPGngkF2o6CYgFEaZK8wM4yqy3naqYrXDDCyC"
